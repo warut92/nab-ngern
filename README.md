@@ -1,3 +1,3 @@
 # nab-ngern
 
-Simple wen app calculator for notes and coins. Create by simple pure javascript.
+Simple wen app calculator for notes and coins. Created by simple pure javascript.
