@@ -13,16 +13,21 @@
     input {
       font-family: 'Trirong', serif;
     }
+    /* align table center */
     div {
-      padding-right: 30px;
-      padding-left: 40px;
+      padding-right: 10px;
+      padding-left: 10px;
     }
+    /* table */
     div { display: table; }
     span { display: table-row; }
     input { display: table-cell; }
     p { display: table-cell; }
-  </style>
 
+    .result {
+    font-size: 20px;
+  }
+  </style>
 
 </head>
 
@@ -31,24 +36,36 @@
   <div>
     <h1>นับเงิน</h1>
     ผลลัพท์ :<br>
-    <b id="result">0</b>
+    <b class="result" id="result">0</b>
     <span>
-      <p>1000 x</p><input type="text" pattern="\d*" id="1000" oninput="sum();"></input><br>
+      <p>1000 x</p>
+      <input type="text" pattern="\d*" id="1000" oninput="sum();"></input><br>
+      <p id="sum1000">= 0</p>
     </span>
     <span>
-      <p>500  x</p><input type="text" pattern="\d*" id="500" oninput="sum();"></input><br>
+      <p>500  x</p>
+      <input type="text" pattern="\d*" id="500" oninput="sum();"></input><br>
+      <p id="sum500">= 0</p>
     </span>
     <span>
-      <p>100 x</p><input type="text" pattern="\d*" id="100" oninput="sum();"></input><br>
+      <p>100 x</p>
+      <input type="text" pattern="\d*" id="100" oninput="sum();"></input><br>
+      <p id="sum100">= 0</p>
     </span>
     <span>
-      <p>50 x</p><input type="text" pattern="\d*" id="50" oninput="sum();"></input><br>
+      <p>50 x</p>
+      <input type="text" pattern="\d*" id="50" oninput="sum();"></input><br>
+      <p id="sum50">= 0</p>
     </span>
     <span>
-      <p>20 x</p><input type="text" pattern="\d*" id="20" oninput="sum();"></input><br>
+      <p>20 x</p>
+      <input type="text" pattern="\d*" id="20" oninput="sum();"></input><br>
+      <p id="sum20">= 0</p>
     </span>
     <span>
-      <p>เหรียญ = </p><input type="text" pattern="\d*" id="etc" oninput="sum();"></input><br>
+      <p>เหรียญ = </p>
+      <input type="text" pattern="\d*" id="etc" oninput="sum();"></input><br>
+      <p id="sumEtc">= 0</p>
     </span>
 
   </div>

@@ -12,7 +12,18 @@ function sum() {
   let NumFifty = Number(fifty.value)
   let NumTwenty = Number(twenty.value)
   let NumEtc = Number(etc.value)
-  
+
+  //
+  document.getElementById("sum1000").innerText = " = " + (NumOneThousand * 1000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  document.getElementById("sum500").innerText = " = " + (NumFiveHundred * 500).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  document.getElementById("sum100").innerText = " = " + (NumOneHundred * 100).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  document.getElementById("sum50").innerText = " = " + (NumFifty * 50).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  document.getElementById("sum20").innerText = " = " + (NumTwenty * 20).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  document.getElementById("sumEtc").innerText = " = " + (NumEtc).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+
+
+
   let total = (NumOneThousand * 1000) + (NumFiveHundred * 500) + (NumOneHundred * 100) + (NumFifty * 50) + (NumTwenty * 20) + NumEtc;
   total = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   document.getElementById("result").innerText = total;
