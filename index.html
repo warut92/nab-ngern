@@ -14,6 +14,14 @@
     input {
       font-family: 'Trirong', serif;
     }
+    div {
+      padding-right: 30px;
+      padding-left: 40px;
+    }
+    div { display: table; }
+    span { display: table-row; }
+    input { display: table-cell; }
+    p { display: table-cell; }
   </style>
 
 
@@ -23,13 +31,29 @@
   <!-- partial:index.partial.html -->
   <center>
     <h1>นับเงิน</h1>
-    1000 : <input type="text" pattern="\d*" id="1000" oninput="sum();"></input><br>
-    500 : <input type="text" pattern="\d*" id="500" oninput="sum();"></input><br>
-    100 : <input type="text" pattern="\d*" id="100" oninput="sum();"></input><br>
-    50 : <input type="text" pattern="\d*" id="50" oninput="sum();"></input><br>
-    20 : <input type="text" pattern="\d*" id="20" oninput="sum();"></input><br>
-    เหรียญ : <input type="text" pattern="\d*" id="etc" oninput="sum();"></input><br>
-    ผลลัพท์ : <h3 id="result"></h3>
+    ผลลัพท์ : <p id="result">0</p>
+  </center>
+  <div>
+    <span>
+      <p>1000 x</p><input type="text" pattern="\d*" id="1000" oninput="sum();"></input><br>
+    </span>
+    <span>
+      <p>500  x</p><input type="text" pattern="\d*" id="500" oninput="sum();"></input><br>
+    </span>
+    <span>
+      <p>100 x</p><input type="text" pattern="\d*" id="100" oninput="sum();"></input><br>
+    </span>
+    <span>
+      <p>50 x</p><input type="text" pattern="\d*" id="50" oninput="sum();"></input><br>
+    </span>
+    <span>
+      <p>20 x</p><input type="text" pattern="\d*" id="20" oninput="sum();"></input><br>
+    </span>
+    <span>
+      <p>เหรียญ = </p><input type="text" pattern="\d*" id="etc" oninput="sum();"></input><br>
+    </span>
+
+  </div>
 
     <!-- <input type="button" value="Capture" onclick="capture()"/> -->
 
