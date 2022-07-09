@@ -9,8 +9,7 @@
   <style media="screen">
     @import url('https://cdn.jsdelivr.net/gh/lazywasabi/thai-web-fonts@6/fonts/Trirong/Trirong.css');
 
-    body,
-    input {
+    body, input, button {
       font-family: 'Trirong', serif;
     }
     /* align table center */
@@ -24,19 +23,26 @@
     input { display: table-cell; }
     p { display: table-cell; }
 
+    .title {
+      font-size: 30px;
+    }
+
     .result {
     font-size: 20px;
-  }
+    text-align: center;
+    }
   </style>
 
 </head>
 
 <body>
   <!-- partial:index.partial.html -->
-  <div>
-    <h1>นับเงิน</h1>
-    ผลลัพท์ :<br>
-    <b class="result" id="result">0</b>
+  <button id="btn" onclick="showDiv()" style="position: absolute;right: 0px;">แยกเหรียญ</button>
+    <b class="title">นับเงิน</b><br>
+    <center>
+      รวมเป็นเงิน :  <b class="result" id="result">0</b>
+    </center>
+    <div>
     <span>
       <p>1000 x</p>
       <input type="text" pattern="\d*" id="1000" oninput="sum();"></input><br>
@@ -62,18 +68,37 @@
       <input type="text" pattern="\d*" id="20" oninput="sum();"></input><br>
       <p id="sum20">= 0</p>
     </span>
-    <span>
-      <p>เหรียญ = </p>
-      <input type="text" pattern="\d*" id="etc" oninput="sum();"></input><br>
+
+    <!-- รวมเหรียญ -->
+    <span id="etcDiv" style="display:table-row;">
+      <p>เหรียญ =</p>
+      <input type="text" pattern="\d*" id="etc" oninput="sum();"></input>
       <p id="sumEtc">= 0</p>
     </span>
 
+    <!-- แยกเหรียญ -->
+      <span id="coins10" style="display:none;">
+      <p style="display:table-cell;">10 x</p>
+      <input style="display:table-cell;" type="text" pattern="\d*" id="10" oninput="sum();"></input>
+      <p id="sumTen">= 0</p>
+    </span>
+    <span id="coins5" style="display:none;">
+      <p style="display:table-cell;">5 x</p>
+      <input style="display:table-cell;" type="text" pattern="\d*" id="5" oninput="sum();"></input>
+      <p style="display:table-cell;" id="sumFive">= 0</p>
+    </span>
+    <span id="coins2" style="display:none;">
+      <p style="display:table-cell;">2 x</p>
+      <input style="display:table-cell;" type="text" pattern="\d*" id="2" oninput="sum();"></input>
+      <p style="display:table-cell;" id="sumTwo">= 0</p>
+    </span>
+    <span id="coins1" style="display:none;">
+      <p style="display:table-cell;">1 x</p>
+      <input style="display:table-cell;" type="text" pattern="\d*" id="1" oninput="sum();"></input>
+      <p style="display:table-cell;" id="sumOne">= 0</p>
+    </span>
   </div>
 
-    <!-- <input type="button" value="Capture" onclick="capture()"/> -->
-
-    <!-- https://github.com/niklasvh/html2canvas -->
-    <!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.4/html2canvas.min.js"></script> -->
     <!-- partial -->
     <script src="./script.js"></script>
 
